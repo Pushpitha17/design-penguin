@@ -68,10 +68,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        'bg-slide': {
+          '0%': { left: '-150%' },
+          '100%': { left: '0%' },
+        },
+        'infinite-scroll-left': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        'infinite-scroll-right': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(100%)' },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'bg-slide': 'bg-slide 1.5s forwards',
+        'infinite-scroll-left': 'infinite-scroll-left 25s linear infinite',
+        'infinite-scroll-right': 'infinite-scroll-right 25s linear infinite',
       },
     },
   },
